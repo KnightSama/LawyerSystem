@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+	"http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+
+	<package name="registration" extends="struts-default">
+		<action name="login" class="com.bysj.action.ManagerAction">
+			<result name="success">/system.jsp</result>
+			<result name="fail">/login.jsp</result>
+			<result name="null">/login.jsp</result>
+		</action>
+
+
+
+
+		<action name="welcome">
+			<result>jsp/welcome.jsp</result>
+		</action>
+
+		<action name="addmanager" class="com.bysj.action.AddManagerAction">
+			<result name="success">addmanager.jsp</result>
+		</action>
+		<action name="changepassword" class="com.bysj.action.ChangePasswordAction">
+			<result name="success">changepassword.jsp</result>
+		</action>
+		
+		
+		
+		
+		
+		<action name="findlog" class="com.bysj.action.FindLogAction">
+			<result name="success">findlog.jsp</result>
+		</action>
+		<action name="showlog" class="com.bysj.show.action.ShowLogAction">
+			<result name="success">findlog.jsp</result>
+		</action>
+		<action name="deletelog" class="com.bysj.action.DeleteLogAction">
+			<result name="success">findlog.jsp</result>
+		</action>
+		
+		
+		
+		
+		
+        <action name="findmanager" class="com.bysj.action.FindManagerAction">
+			<result name="success">findmanager.jsp</result>
+		</action>
+        <action name="showmanager" class="com.bysj.show.action.ShowManagerAction">
+			<result name="success">findmanager.jsp</result>
+		</action>
+		<action name="deletemanager" class="com.bysj.action.DeleteManagerAction">
+			<result name="success">findmanager.jsp</result>
+		</action>
+		<action name="jumpeditmanager" class="com.bysj.jump.action.EditManagerAction">
+			<result name="success">editmanager.jsp</result>
+		</action>
+		<action name="editmanager" class="com.bysj.action.EditManagerAction">
+			<result name="success" >findmanager.jsp</result>
+		</action>
+		
+		
+		
+		
+		
+        <action name="addcase" class="com.bysj.action.AddCaseAction">
+			<result name="success" >editcase.jsp</result>
+		</action>
+		<action name="findcase" class="com.bysj.action.FindCaseAction">
+			<result name="success" >findcase.jsp</result>
+		</action>
+		<action name="showcase" class="com.bysj.show.action.ShowCaseAction">
+			<result name="success" >findcase.jsp</result>
+		</action>
+		<action name="deletecase" class="com.bysj.action.DeleteCaseAction">
+			<result name="success" >findcase.jsp</result>
+		</action>
+		<action name="jumpeditcase" class="com.bysj.jump.action.EditCaseAction">
+			<result name="success" >updatecase.jsp</result>
+		</action>
+		<action name="editcase" class="com.bysj.action.EditCaseAction">
+			<result name="success" >findcase.jsp</result>
+		</action>
+		<action name="lookcase" class="com.bysj.jump.action.LookCaseAction">
+			<result name="success" >lookcase.jsp</result>
+		</action>
+		
+		
+		
+		
+		<action name="addclient" class="com.bysj.action.AddClientAction">
+			<result name="success" >editclient.jsp</result>
+		</action>
+		<action name="findclient" class="com.bysj.action.FindClientAction">
+			<result name="success" >findclient.jsp</result>
+		</action>
+		<action name="showclient" class="com.bysj.show.action.ShowClientAction">
+			<result name="success" >findclient.jsp</result>
+		</action>
+		<action name="deleteclient" class="com.bysj.action.DeleteClientAction">
+			<result name="success" >findclient.jsp</result>
+		</action>
+		<action name="jumpeditclient" class="com.bysj.jump.action.EditClientAction">
+			<result name="success" >updateclient.jsp</result>
+        </action>
+        <action name="editclient" class="com.bysj.action.EditClientAction">
+			<result name="success" >findclient.jsp</result>
+			<result name="nocase" >updateclient.jsp</result>
+		</action>
+		<action name="lookclient" class="com.bysj.jump.action.LookClientAction">
+			<result name="success" >lookclient.jsp</result>
+		</action>
+		
+		
+		
+		
+		
+		<action name="addemployee" class="com.bysj.action.AddEmployeeAction">
+			<result name="success" >editemployee.jsp</result>
+		</action>
+		<action name="findemployee" class="com.bysj.action.FindEmployeeAction">
+			<result name="success" >findemployee.jsp</result>
+		</action>
+		<action name="showemployee" class="com.bysj.show.action.ShowEmployeeAction">
+			<result name="success" >findemployee.jsp</result>
+		</action>
+		<action name="deleteemployee" class="com.bysj.action.DeleteEmployeeAction">
+			<result name="success" >findemployee.jsp</result>
+		</action>
+		<action name="jumpeditemployee" class="com.bysj.jump.action.EditEmployeeAction">
+			<result name="success" >updateemployee.jsp</result>
+        </action>
+        <action name="editemployee" class="com.bysj.action.EditEmployeeAction">
+			<result name="success" >findemployee.jsp</result>
+		</action>
+		<action name="lookemployee" class="com.bysj.jump.action.LookEmployeeAction">
+			<result name="success" >lookemployee.jsp</result>
+		</action>
+		
+		
+		
+		
+		<action name="printcase" class="com.bysj.jump.action.EditCaseAction">
+			<result name="success" >printcase.jsp</result>
+		</action>
+		<action name="jumpprintcase" class="com.bysj.jump.action.PrintCaseAction">
+			<result name="casebegin" >casebegin.jsp</result>
+			<result name="caseends" >caseends.jsp</result>
+			<result name="casefee" >casefee.jsp</result>
+			<result name="caseprocessing" >caseprocessing.jsp</result>
+			<result name="filelend" >filelend.jsp</result>
+		</action>
+		
+		
+		
+		<action name="addOrder" class="com.bysj.action.AddOrderAction">
+			<result name="success" >order.html</result>
+		</action>
+		<action name="addCansulation" class="com.bysj.action.AddCansulationAction">
+			<result name="success" >cansulation.html</result>
+		</action>
+		<action name="videoAction" class="com.bysj.action.PlayVideoAction">
+			<result name="success" >video.jsp</result>
+		</action>
+		
+		
+		
+		<action name="findorder" class="com.bysj.action.FindOrderAction">
+			<result name="success">jsp3/findorder.jsp</result>
+		</action>
+		<action name="showorder" class="com.bysj.show.action.ShowOrderAction">
+			<result name="success">jsp3/findorder.jsp</result>
+		</action>
+		<action name="deleteorder" class="com.bysj.action.DeleteOrderAction">
+			<result name="success">jsp3/findorder.jsp</result>
+		</action>
+		
+		<action name="findcansulation" class="com.bysj.action.FindCansulationAction">
+			<result name="success">jsp3/findcansulation.jsp</result>
+		</action>
+		<action name="showcansulation" class="com.bysj.show.action.ShowCansulationAction">
+			<result name="success">jsp3/findcansulation.jsp</result>
+		</action>
+		<action name="deletecansulation" class="com.bysj.action.DeleteCansulationAction">
+			<result name="success">jsp3/findcansulation.jsp</result>
+		</action>
+
+	</package>
+
+
+</struts>
+	
